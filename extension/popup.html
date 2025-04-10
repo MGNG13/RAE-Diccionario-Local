@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAE Diccionario Local</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <img src="./rae_diccionario_local.png" style="width: -webkit-fill-available;" alt="RAE Diccionario Local">
+    <div class="switch-container">
+        <label class="switch">
+            <input type="checkbox" id="toggle">
+            <span class="slider"></span>
+        </label>
+        <span id="status"></span>
+    </div>
+    <div class="server-status-container">
+        <div id="serverStatus" class="server-status">Verificando servidor...</div>
+    </div>
+    <div class="button-container">
+        <button id="processText">Procesar todo el texto en segundo plano</button>
+        <div id="processStatus" class="status-message"></div>
+    </div>
+    <div class="button-container">
+        <button id="deleteStorage">Borrar base de datos local</button>
+        <div id="deleteStatus" class="status-message">Base de datos local:</div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

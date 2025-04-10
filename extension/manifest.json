@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "RAE Diccionario Local",
+    "version": "1.0.0",
+    "description": "Extensión para buscar significados de palabras en español. Beta 1.0.0.",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "icons": {
+        "128": "icon.png"
+    },
+    "host_permissions": [
+        "*://*/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["content.css", "rae_diccionario_local.png"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

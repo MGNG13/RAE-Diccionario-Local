@@ -1,0 +1,29 @@
+.tooltip, .tooltip * {
+    font-family: "DM Sans", Arial, sans-serif;
+}
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 9999;
+    font-size: 10px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms ease, filter 300ms ease, transform 300ms ease, font-size 300ms ease, box-shadow 300ms ease, padding 300ms ease, border-radius 300ms ease, border 300ms ease;
+    display: none;
+    max-width: 300px;
+    filter: blur(5px);
+    --in-transition: 0;
+}
+.tooltip.show {
+    filter: blur(0px);
+    padding: 10px;
+    border-radius: 8px;
+    opacity: 1;
+    border: 1px solid #ccc;
+    transform: scale(1);
+    --in-transition: 1;
+    font-size: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
